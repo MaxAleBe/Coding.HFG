@@ -1,4 +1,4 @@
-let=ampel;
+et ampel;
 function setup() {
   createCanvas(400, 400);
   ampel = 'green';
@@ -25,6 +25,11 @@ function mouseMoved() {
     ampel = 'yellow'; // sonst
   }
 }
+
+
+
+
+
 
 
 
