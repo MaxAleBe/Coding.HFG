@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mandala</title>
+    <style>
+        canvas {
+            border: 1px solid rgb(210, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        // Canvas-Setup
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        const canvasWidth = canvas.width;
+        const canvasHeight = canvas.height;
+
+        for (let i = 1; i <= 5; i++) {
+            let radius = i * 30;
+            let x = canvasWidth / 2;
+            let y = canvasHeight / 2;
+            let angle = 0;
+            let step = (Math.PI * 2) / 36;
+            
+            ctx.beginPath();
+            for (let j = 0; j < 36; j++) {
+                let xPos = x + Math.cos(angle) * radius;
+                let yPos = y + Math.sin(angle) * radius;
+                if (j === 0) {
+                    ctx.moveTo(xPos, yPos);
+                } else {
+                    ctx.lineTo(xPos, yPos);
+                }
+                angle += step;
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        for (let i = 1; i <= 3; i++) {
+            let radius = i * 60;
+            let x = canvasWidth / 2;
+            let y = canvasHeight / 2;
+            let angle = 0;
+            let step = (Math.PI * 2) / 36;
+            
+            ctx.beginPath();
+            for (let j = 0; j < 36; j++) {
+                let xPos = x + Math.cos(angle) * radius;
+                let yPos = y + Math.sin(angle) * radius;
+                if (j === 0) {
+                    ctx.moveTo(xPos, yPos);
+                } else {
+                    ctx.lineTo(xPos, yPos);
+                }
+                angle += step;
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>
