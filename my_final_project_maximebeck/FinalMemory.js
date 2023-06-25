@@ -125,6 +125,7 @@ function restartGame() {
   container.style.pointerEvents = 'all';
   score.innerHTML = '0';
   timer.innerHTML = '0:00';
+  resetCards();
   suffleImage();
   gameStarted = false;
 }
