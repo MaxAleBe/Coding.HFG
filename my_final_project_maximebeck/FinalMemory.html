@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memmory Game</title>
+    <link rel="stylesheet" href="FinalMemory.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<script defer src="FinalMemory.js"></script>
+</head>
+<body>
+    <div class="head">
+        <h2>Memory Game</h2>
+        <div class="score">Score: <span>0</span></div>
+        <div class="timer">Time: <span>00:00</span></div>
+        <button onclick="restartGame()">Restart</button>
+    </div>
+
+    
+    <div class="container">
+        <div class="cell">
+            <div class="front" data-index="1"><img src="karte.1.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div> 
+        </div>
+        <div class="cell">
+            <div class="front" data-index="1"><img src="karte.1.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="2"><img src="karte.2.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="2"><img src="karte.2.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="3"><img src="karte.3.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="3"><img src="karte.3.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="4"><img src="karte.4.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="4"><img src="karte.4.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="5"><img src="karte.5.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="5"><img src="karte.5.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="6"><img src="karte.6.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="6"><img src="karte.6.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="7"><img src="karte.7.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="7"><img src="karte.7.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+
+        <div class="cell">
+            <div class="front" data-index="8"><img src="karte.8.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="8"><img src="karte.8.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+
+        <div class="cell">
+            <div class="front" data-index="9"><img src="karte.9.png".M.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="9"><img src="karte.9.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+
+
+        <div class="cell">
+            <div class="front" data-index="10"><img src="karte.10.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="10"><img src="karte.10.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+
+        <div class="cell">
+            <div class="front" data-index="11"><img src="karte.11.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="11"><img src="karte.11.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="12"><img src="karte.12.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="12"><img src="karte.12.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="13"><img src="karte.13.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="13"><img src="karte.13.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="14"><img src="karte.14.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="14"><img src="karte.14.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="15"><img src="karte.15.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="15"><img src="karte.15.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="16"><img src="karte.16.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="16"><img src="karte.16.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="17"><img src="karte.17.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="17"><img src="karte.17.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="18"><img src="karte.18.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="18"><img src="karte.18.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="19"><img src="karte.19.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="19"><img src="karte.19.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="20"><img src="karte.20.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+        <div class="cell">
+            <div class="front" data-index="20"><img src="karte.20.png" alt=""></div>
+            <div class="back"><img src="karte.cover.png"></div>
+        </div>
+    </div>
+</body>
+</html>
+
